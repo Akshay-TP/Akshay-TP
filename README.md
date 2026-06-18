@@ -81,6 +81,12 @@ Portfolios in that work are scored against a single composite objective, weighti
 
 $$\text{Score} = 0.4 \cdot \text{Sortino} + 0.3 \cdot \text{Sharpe} + 0.3 \cdot \text{Calmar}$$
 
+where each ratio compares excess return $(R_p - R_f)$ against a different notion of risk:
+
+$$\text{Sharpe} = \frac{R_p - R_f}{\sigma_p} \qquad \text{Sortino} = \frac{R_p - R_f}{\sigma_d} \qquad \text{Calmar} = \frac{R_p - R_f}{\lvert \text{MDD} \rvert}$$
+
+with $\sigma_p$ the total volatility, $\sigma_d$ the downside deviation, and $\text{MDD}$ the maximum drawdown.
+
 **Machine learning & AI systems**
 Retrieval-augmented generation done with intent: LLM reranking, query decomposition, hybrid keyword-and-semantic retrieval, and latency budgets that actually hold under load. Multi-agent systems, computer vision with YOLO, and an old soft spot for computational chemistry (I once solved the hydrogen atom from first principles and rendered the orbitals in Blender).
 
@@ -106,16 +112,16 @@ Buck and boost converters, VESC shields, and PCB design in Altium; the FPGA and 
 
 ### ⚡ Currently
 
-- **Research Assistant @ HKU InnoWing** — an advanced RAG system over the InnoWings knowledge base, and a multi-agent moot-court simulator for law students (now growing a voice interface)
+- **Research Assistant @ HKU InnoWing**: an advanced RAG system over the InnoWings knowledge base, and a multi-agent moot-court simulator for law students (now growing a voice interface)
 - Co-authoring a paper on **AI in urban planning**, grown out of a coursework methodology that turned out to be thorough enough to publish
 - Four active research assistantships across LLMs, DFT simulation, and more, with publications as the goal
-- Getting genuinely, properly good at C++ — the one language I dodged for too long
+- Getting genuinely, properly good at C++, the one language I dodged for too long
 
 ### 🏅 A few things along the way
 
 - One of 36 nationally selected for the **Research Science Initiative** at IIT Madras; one of 50 internationally for **Columbia's Roaring Cubs Collective** (published there on AI road-damage detection)
 - **Top 10 / 105+ teams** at the HKU Web3 Quant Trading Hackathon · semi-finalist at Venture Capital On Campus and Alibaba JumpStarter ZPIRE
-- International Research Olympiad 2025 — Global Rank 191
+- International Research Olympiad 2025, Global Rank 191
 - AI Trainee at **RAICOM** and Electronics Team at **ROBOCON** at HKU, because someone has to keep both halves of "Computer Engineering" busy
 
 ---
@@ -148,7 +154,7 @@ Buck and boost converters, VESC shields, and PCB design in Altium; the FPGA and 
 
 ---
 
-<p align="center"><i>"Your right is to action alone, never to its fruits — let not the fruits of action be your motive."</i><br/>— Bhagavad Gita, 2.47</p>
+<p align="center"><i>"Your right is to action alone, never to its fruits; let not the fruits of action be your motive."</i><br/>Bhagavad Gita, 2.47</p>
 
 ---
 
@@ -163,4 +169,4 @@ Buck and boost converters, VESC shields, and PCB design in Altium; the FPGA and 
   </a>
 </p>
 
-> Repos to be pinned and linked soon — a fair amount of the work above currently lives in collaborators' repositories.
+> Repos to be pinned and linked soon. A fair amount of the work above currently lives in collaborators' repositories.
