@@ -1,0 +1,49 @@
+<svg width="100%" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title>Retrieval-augmented generation pipeline</title>
+  <desc>A query is decomposed, then retrieved over both semantic and keyword channels, fused and reranked into a top-k context, and passed to an LLM to generate a grounded answer, all under a sub-25-second latency budget.</desc>
+  <defs>
+    <marker id="arrowd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#9c9a92" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="34" font-size="14" font-weight="500" fill="#9c9a92">RAG pipeline · sub-25s budget</text>
+
+  <!-- Query -->
+  <rect x="40" y="116" width="96" height="52" rx="8" fill="#3C3489" stroke="#AFA9EC" stroke-width="0.5"/>
+  <text x="88" y="138" font-size="14" font-weight="500" fill="#EEEDFE" text-anchor="middle">Query</text>
+  <text x="88" y="156" font-size="12" fill="#CECBF6" text-anchor="middle">+ decompose</text>
+
+  <!-- Semantic retrieval -->
+  <rect x="196" y="74" width="150" height="52" rx="8" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"/>
+  <text x="271" y="96" font-size="14" font-weight="500" fill="#E1F5EE" text-anchor="middle">Semantic search</text>
+  <text x="271" y="114" font-size="12" fill="#9FE1CB" text-anchor="middle">vector / ChromaDB</text>
+
+  <!-- Keyword retrieval -->
+  <rect x="196" y="158" width="150" height="52" rx="8" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"/>
+  <text x="271" y="180" font-size="14" font-weight="500" fill="#E1F5EE" text-anchor="middle">Keyword search</text>
+  <text x="271" y="198" font-size="12" fill="#9FE1CB" text-anchor="middle">full-text</text>
+
+  <!-- Rerank -->
+  <rect x="406" y="116" width="104" height="52" rx="8" fill="#712B13" stroke="#F0997B" stroke-width="0.5"/>
+  <text x="458" y="138" font-size="14" font-weight="500" fill="#FAECE7" text-anchor="middle">Fuse + rerank</text>
+  <text x="458" y="156" font-size="12" fill="#F5C4B3" text-anchor="middle">top-k context</text>
+
+  <!-- Generate -->
+  <rect x="570" y="116" width="80" height="52" rx="8" fill="#3C3489" stroke="#AFA9EC" stroke-width="0.5"/>
+  <text x="610" y="138" font-size="14" font-weight="500" fill="#EEEDFE" text-anchor="middle">LLM</text>
+  <text x="610" y="156" font-size="12" fill="#CECBF6" text-anchor="middle">answer</text>
+
+  <!-- Arrows: query to both retrievers -->
+  <path d="M136 132 L166 132 L166 100 L194 100" fill="none" stroke="#9c9a92" stroke-width="1.5" marker-end="url(#arrowd)"/>
+  <path d="M136 152 L166 152 L166 184 L194 184" fill="none" stroke="#9c9a92" stroke-width="1.5" marker-end="url(#arrowd)"/>
+
+  <!-- Arrows: both retrievers to rerank -->
+  <path d="M346 100 L376 100 L376 132 L404 132" fill="none" stroke="#9c9a92" stroke-width="1.5" marker-end="url(#arrowd)"/>
+  <path d="M346 184 L376 184 L376 152 L404 152" fill="none" stroke="#9c9a92" stroke-width="1.5" marker-end="url(#arrowd)"/>
+
+  <!-- Arrow: rerank to generate -->
+  <line x1="510" y1="142" x2="568" y2="142" stroke="#9c9a92" stroke-width="1.5" marker-end="url(#arrowd)"/>
+
+  <text x="40" y="266" font-size="12" fill="#9c9a92">Hybrid retrieval (semantic + keyword) is fused and reranked, then grounds the LLM's answer.</text>
+</svg>
