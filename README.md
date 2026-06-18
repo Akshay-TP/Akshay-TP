@@ -55,15 +55,16 @@ def edge(signals):
 
 **ML / AI**
 
-```cpp
-// RAG done with intent:
-// reranking, query
-// decomposition, hybrid
-// retrieval, latency that
-// holds under load.
-auto answer = retrieve(q)
-             | rerank
-             | generate;
+```python
+def answer(query):
+    # hybrid retrieval, LLM
+    # rerank, generate; under
+    # a hard latency budget.
+    hits = semantic(query) \
+         + keyword(query)
+    ctx = rerank(hits)[:k]
+    return generate(query,
+                    ctx)
 ```
 
 </td>
@@ -89,6 +90,13 @@ with $\sigma_p$ the total volatility, $\sigma_d$ the downside deviation, and $\t
 
 **Machine learning & AI systems**
 Retrieval-augmented generation done with intent: LLM reranking, query decomposition, hybrid keyword-and-semantic retrieval, and latency budgets that actually hold under load. Multi-agent systems, computer vision with YOLO, and an old soft spot for computational chemistry (I once solved the hydrogen atom from first principles and rendered the orbitals in Blender).
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/rag-pipeline-dark.svg" />
+    <img src="assets/rag-pipeline-light.svg" alt="RAG pipeline: a query is decomposed, retrieved over semantic and keyword channels, fused and reranked into a top-k context, then passed to an LLM to generate a grounded answer, under a sub-25s latency budget." width="100%" />
+  </picture>
+</p>
 
 **Hardware & electronics**
 Buck and boost converters, VESC shields, and PCB design in Altium; the FPGA and computer-architecture half of the degree; soldering, with the small burn hole in one finger to show for it. The long game is the build-it-all-from-silicon project that makes the other two tracks honest:
