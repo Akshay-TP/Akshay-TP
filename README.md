@@ -151,14 +151,6 @@ Buck and boost converters, VESC shields, and PCB design in Altium; the FPGA and 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
 
----
-
-### 📊 GitHub in numbers
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Akshay-TP&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Akshay-TP&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top languages" />
-</p>
 
 ---
 
